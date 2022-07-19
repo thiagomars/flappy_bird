@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/flappy.css">
+</head>
+
+<body class="conteudo">
+    <h1>Flappy Bird</h1>
+
+    <div class="configuracoes" id="configuracoes">
+        <h2>Configurações do Jogo</h2>
+        <form>
+            <div class="div_form">
+                <label for="name" id="name">Nome do jogador: </label>
+                <input type="text" id="name_input" name="nome" placeholder="Nome Completo" value="Jogador 01">
+            </div>
+
+            <div class="div_form">
+                <label for="cenario" id="cenario">Cenário: </label>
+                <input type="radio" id="noturno" name="group_cenario" value="noturno">
+                <label for="noturno">Noturno</label>
+                <input type="radio" id="diurno" name="group_cenario" value="diurno" checked>
+                <label for="diurno">Diurno</label>
+            </div>
+
+            <div class="div_form">
+                <label for="intervalo" id="intervalo">Intervalo de abertura dos canos: </label>
+                <input type="radio" id="facil_intervalo" name="group_abertura_canos" value="facil">
+                <label for="facil_intervalo">Fácil</label>
+                <input type="radio" id="medio_intervalo" name="group_abertura_canos" value="medio" checked>
+                <label for="medio_intervalo">Médio</label>
+                <input type="radio" id="dificil_intervalo" name="group_abertura_canos" value="dificil">
+                <label for="dificil_intervalo">Difícil</label>
+            </div>
+
+            <div class="div_form">
+                <label for="distancia" id="distancia">Distância entre dos canos: </label>
+                <input type="radio" id="facil_distancia" name="group_distancia_canos" value="facil">
+                <label for="facil_distancia">Fácil</label>
+                <input type="radio" id="medio_distancia" name="group_distancia_canos" value="medio" checked>
+                <label for="medio_distancia">Médio</label>
+                <input type="radio" id="dificil_distancia" name="group_distancia_canos" value="dificil">
+                <label for="dificil_distancia">Difícil</label>
+            </div>
+
+            <div class="div_form">
+                <label for="velocidade" id="velocidade">Velocidade do jogo: </label>
+                <input type="number" id="velocidade_input" name="velocidade" min="1" max="10" placeholder="Entre 1 e 10. O padrão é 3" value="3">
+            </div>
+
+            <div class="div_form">
+                <label for="personagem">Personagens: </label>
+                <select name="personagem" id="personagem">
+                    <option value="passaro" selected>Pássaro</option>
+                    <option value="vaca">Vaca</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="sonic">Sonic</option>
+                    <option value="cadeira">Cadeira</option>
+                    <option value="dragao">Dragão</option>
+                    <option value="gato">Gato</option>
+                    <option value="lapis">Lápis</option>
+                    <option value="passaro" selected>Pássaro</option>
+                </select>
+            </div>
+
+            <div class="div_form">
+                <label for="tipo_jogo" id="tipo_jogo">Tipo do jogo: </label>
+                <input type="radio" id="treino" name="group_tipo" value="treino">
+                <label for="treino">Fácil</label>
+                <input type="radio" id="real" name="group_tipo" value="real" checked>
+                <label for="real">Real</label>
+            </div>
+
+            <div class="div_form">
+                <label for="velocidade_person" id="velocidade_person">Velocidade do personagem: </label>
+                <input type="radio" id="facil_velocidade" name="group_velocidade_pass" value="facil">
+                <label for="facil_velocidade">Fácil</label>
+                <input type="radio" id="medio_velocidade" name="group_velocidade_pass" value="medio" checked>
+                <label for="medio_velocidade">Médio</label>
+                <input type="radio" id="dificil_velocidade" name="group_velocidade_pass" value="dificil">
+                <label for="dificil_velocidade">Difícil</label>
+            </div>
+
+            <div class="div_form">
+                <label for="potuacao" id="pontuaca">Pontuação: </label>
+                <input type="radio" id="pontuacao_um" name="group_pontos" value="um" checked>
+                <label for="pontuacao_um">1 (Um)</label>
+                <input type="radio" id="pontuacao_dois" name="group_pontos" value="dez">
+                <label for="pontuacao_dois">10 (Dez)</label>
+                <input type="radio" id="pontuacao_tres" name="group_pontos" value="cem">
+                <label for="pontuacao_tres">100 (Cem)</label>
+            </div>
+            
+        </form>
+
+        <div class="class_iniciar">
+            <p id="iniciar" onclick="config()">INICIAR</p>
+        </div>
+
+    </div>
+
+    <div wm-flappy id="jogo">
+        
+    </div>
+
+    <div class="container" id="fim_de_jogo">
+        <h3>Parabéns !!!</h3> 
+        <p id="fim_dados">nome_jogador</p>
+        <h3>Sua pontuação foi: </h3>
+        <p id="pontuacao">000</p>
+    </div>
+
+
+    <script src="js/flappy.js"></script>
+</body>
+
+</html>
